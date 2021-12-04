@@ -1,0 +1,712 @@
+﻿*
+{
+	outline: none;
+	--fundo: rgb(230,230,230);
+	font-family: Bahnschrift Light, Comic Sans MS, Segoe UI Semilight, Calibri;
+}
+
+html 
+{
+ 	 height: 100%;
+ 	 overflow: hidden;
+}
+
+body 
+{ 
+
+	perspective: 1px;
+ 	transform-style: preserve-3d;
+  	height: 100%;
+	padding: 0;
+	margin: 0;
+	overflow: hidden;
+	overflow-y: auto;
+	background-color: var(--fundo);
+}
+
+/*PARALLAX*/
+
+.slide 
+{
+	position: relative;
+	transform-style: inherit;
+	min-height: 45vh;
+	width: 100vw;
+}
+#slide1
+{
+	overflow: hidden;
+}
+
+#slide1:before 
+{
+	background-image: url("../imagem/capa home.jpg");
+	background-size: 100% auto;
+	min-height: 100vh;
+	background-repeat: no-repeat;
+	transform: translateZ(-1px) scale(2);
+	position: absolute;
+	content: "";
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin-top: 0;
+}
+
+#slide2
+{
+ 	background-color: var(--fundo);
+  	width: auto;
+	box-shadow: 0vw -12.424vw 25vw 3.697vw rgba(0,0,0,0.82);
+}
+
+div#title
+{
+	position: relative;
+	color: rgb(230,230,230);
+	font-size: 3.5vw;
+	margin-left: -9vw;
+	z-index: 1;
+}
+div#title h1
+{
+	padding-top: 30vh;
+	margin-bottom: 0;
+	font-family: inherit;
+	font-size: 4.5vw;
+}
+
+div#title h6
+{
+	font-size: 2.3vw;
+	margin-top: 5px;
+	font-family: inherit;
+}
+
+
+
+/*MENU LATERAL*/
+
+nav#menulateral
+{
+	width: 7%;
+	max-width: 120px;
+	height: 100vh;
+	overflow-y: auto;
+	background-color: rgb(22.5,22.5,22.5);
+	display: inline-block;
+	float: left;
+	top: 0;
+	left: 0;
+}
+
+nav#menulateral button
+{
+	width: 100%;
+	border: none;
+	height: 8%;
+	transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+	font-size: 1.1vw;
+	word-wrap: break-word;
+	overflow-y: auto;
+	cursor: pointer;
+	background-color: transparent;
+	color: rgb(245,245,245);
+}
+
+/*VERMELHO*/
+nav#menulateral button#botaomenulateral1:hover, nav#menulateral button#botaomenulateral1.active
+{
+	background-color: rgb(200,50,90);
+}
+
+/*AMARELO*/
+nav#menulateral button#botaomenulateral2:hover, nav#menulateral button#botaomenulateral2.active
+{
+	background-color: rgb(170,170,20);
+}
+
+/*VERDE*/
+nav#menulateral button#botaomenulateral3:hover, nav#menulateral button#botaomenulateral3.active
+{
+	background-color: rgb(30,160,100);
+}
+
+/*AZUL*/
+nav#menulateral button#botaomenulateral4:hover, nav#menulateral button#botaomenulateral4.active
+{
+	background-color: rgb(30,130,180);
+}
+
+
+/*CONTEÚDO*/
+
+div#conteudo
+{
+	width: auto;
+	word-wrap: break-word;
+	overflow: hidden;
+	overflow-y: auto;
+	height: 100vh;
+}
+ /*GALERIA*/
+
+div#galeria
+{
+	width: 40vw;
+	height: 25vw;
+	background-color: silver;
+}
+
+/*PAGINA*/
+
+div#pagina
+{
+	width: 90%;
+	text-align: left;
+	padding-top: 2vw;
+	word-wrap: break-word;
+}
+
+/*PAGINA HOME*/
+
+a#querodarumafesta 
+{
+	outline: 0.3vw solid rgba(45,137,190,1);
+	outline-offset: 0px;
+	transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+	border: none;
+	background-color: rgba(45,137,190,1);
+	padding: 2vw;
+	font-size: 1.8vw;
+	color: white;
+	cursor: pointer;
+	width: 30%;
+	text-decoration: none;
+}
+a#querodarumafesta:hover
+{
+	outline-offset: 2vw;
+	outline-color: transparent;
+	background-color: rgba(30,110,180,1);
+}
+
+/*GALERIA*/
+
+iframe#galeria
+{
+	margin-top: 10%;
+	border: none;
+	overflow: hidden;
+	width: 80%;
+	height: 50vw; 
+}
+
+/*LOGIN*/
+div#login
+{
+	background-color: rgba(45,137,190,1);
+	color: white;
+	z-index: 1;
+	display: inline-block;
+	padding: 1vw;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	text-align: center;
+	top: 0;
+	/*margin-bottom: 8vw;*/
+	font-size: 1.5vw;
+	transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+
+}
+
+div#login:hover
+{
+	background-color: rgba(30,110,180,1);
+}
+div#login a
+{
+	text-decoration: none;
+	color: white;
+	font-weight: 600;
+}
+
+h1#login
+{
+	margin-top: 7vw;
+	margin-bottom: 5vw;
+	font-size: 2.3vw;
+	color: rgba(30,110,180,1);
+}
+
+div#camposlogin
+{
+	padding: 2vw;
+	width: 30%;
+	border: 0.1vw solid rgba(30,110,180,1);
+	border-radius: 15px;
+	border-top: none;
+	border-bottom: none;
+	margin-bottom: 4vw;
+	color: rgba(30,110,180,1);
+}
+
+input#login, button#login, select
+{
+	background-color: transparent;
+	border: none;
+	padding: 1vw;
+	font-size: 1.7vw;
+	width: 70%;
+	margin-bottom: 3vw;
+	text-align: center;
+	transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+	outline: 0.1vw solid rgba(30,110,180,1);
+	border: 0.1vw solid rgba(30,95,127.5,0);
+	color: black;
+}
+
+input#login:hover, button#login:hover
+{
+	outline-offset: 2vw;
+	outline-color: transparent;
+	border: 0.1vw solid rgba(30,110,180,1);
+}
+
+input#login.botao, button#login
+{
+	cursor: pointer;
+	width: 78%;
+}
+input#login.botao:hover, button#login:hover
+{
+	color: white;
+	background-color: rgba(30,110,180,1);
+}
+
+input#login::placeholder
+{
+	font-size: 1.7vw;
+	color: rgba(30,110,180,1);
+}
+
+
+a#login_c
+{
+	color: rgba(30,110,180,1);
+	text-decoration: none;
+	font-size: 1.5vw;
+}
+
+
+div#camposlogin.cadastrado
+{
+	color: rgba(30,110,180,1);
+	letter-spacing: 1px;
+	width: 40%;
+	font-weight: 200;
+}
+div#camposlogin.cadastrado strong
+{
+	font-weight: 800;
+	font-size: 150%;
+}
+
+button#login
+{
+	margin-top: 5vw;
+	margin-bottom: 0;
+	width: 20%;
+}
+
+div#camposlogin.redefinicao
+{
+	font-size: 170%;
+}
+div#camposlogin.redefinicao button
+{
+	width: 40%;
+}
+input#login.contrato
+{
+	width: calc(70% - 2vw);
+	text-align: left;
+	padding: 1vw;
+	height: calc(100% - 2vw);
+	font-size: 1.4vw;
+	margin: 0;
+	outline: none;
+	border: none;
+}
+input#login.contrato:hover
+{
+	outline: none;
+	border: none;
+}
+
+h3#home
+{
+	margin-top: 0;
+	padding-top: 5%;
+	margin-bottom: 8%;	
+	color: rgba(0,40,110,1);
+	font-size: 120%;
+	max-width: 500px;
+	font-weight: 200;
+}
+
+div#contrato
+{
+	width: 80%;
+	text-align: left;
+	margin-top: 4vw;
+}
+div#contrato h2, div#contrato h3
+{
+	color: rgba(30,110,180,1);
+}
+div#contrato h2
+{
+	font-size: 2.3vw;
+}
+div#contrato h3
+{
+	font-size: 1.5vw;
+}
+div#campo
+{
+	display: inline-block;
+	padding: 0;
+	width: 30%;
+	height: 4vw;
+	border: 1px solid rgba(30,95,127.5,0);
+	overflow: hidden;
+	outline: 1px solid rgba(30,110,180,1);
+	outline-offset: -1px;
+	margin-right: 2vw;
+	margin-bottom: 2vw;
+	transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+div#campo:hover
+{
+	outline-offset: 1.5vw;
+	outline-color: transparent;
+	border: 1px solid rgba(30,110,180,1);
+}
+div#campo input#desc
+{
+	margin: 0;
+	height: 4vw;
+	width: 30%;
+	float: left;
+	font-size: 1.4vw;
+	border: none;
+	background-color: transparent;
+	background-color: rgba(30,110,180,1);
+	color: white;
+}
+/*BRINQUEODS TABELA*/
+
+table#evento td input#check_brinquedo, input#check_brinquedo_lido
+{
+	width: 1.5vw;
+	height: 1.5vw;
+	cursor: pointer; 
+}
+
+/*PERFIL*/
+
+hr#perfil
+{
+	border: 0.15vw solid rgba(30,110,180,1);
+	background-color: rgba(30,110,180,1);
+	border-radius: 25px;
+}
+table#perfil
+{
+	margin: 5%;
+}
+table#perfil td
+{
+	text-align: left;
+	color: rgba(30,110,180,1);
+	font-size: 150%;
+
+}
+
+table#perfil td a img
+{
+	width: 5vw;
+	height: 5vw;
+	border-radius: 100%;
+	overflow: hidden;
+	border: 0.3vw solid white;
+}
+
+table#perfil td a#sair, a#contrato
+{
+	text-decoration: none;
+	color: rgba(30,110,180,1);
+	border: 1px solid rgba(30,110,180,1);
+	padding: 1.7vw;
+	padding-top: 0.7vw;
+	padding-bottom: .7vw;
+	transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+	font-size: 80%;
+	border-radius: 10px;
+}
+
+table#perfil td a#sair:hover, a#contrato:hover
+{
+	background-color: rgba(30,110,180,1);
+	color: white;
+}
+
+h2#perfil
+{
+	color: rgba(30,110,180,1);
+	margin: 5%;
+	margin-left: 0;
+	font-size: 180%;
+}
+
+
+div#perfil_campos
+{
+	max-width: 700px;
+	margin-left: 5%;
+	margin-top: 5%;
+}
+
+a#voltar img
+{
+	width: 5vw;
+	height: 5vw;
+	border-radius: 100%;
+	overflow: hidden;
+	border: 0.1vw solid white;
+	background-color: white;
+}
+
+/*EVENTO*/
+table#evento
+{
+	border-radius: 15px;
+	border: 2px solid rgba(30,110,180,1);
+	overflow: hidden;
+}
+
+table#evento tr
+{
+	cursor: pointer;
+	transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+table#evento tr:hover
+{
+	background-color: rgba(30,110,180,1);
+	color: white;
+}
+
+table#evento td
+{
+	font-size: 110%;
+	padding: 1.5vw;
+	text-align: center;
+	overflow-wrap: break-word;
+}
+
+table#evento.passado
+{
+	border-color: rgb(200,50,90);
+}
+
+table#evento.passado tr:hover
+{
+	background-color: rgb(200,50,90);
+}
+div#verevento
+{
+	margin: 5%;
+}
+
+div#verevento h1
+{
+	color: rgba(30,110,180,1);
+	font-size: 170%;
+}
+div#verevento h2
+{
+	font-size: 130%;
+}
+
+table#visualizacao, table#brinquedos
+{
+	border-radius: 10px;
+	overflow: hidden;
+}
+
+table#visualizacao td
+{
+	border: none;
+	font-weight: normal; 
+	padding-right: 1.1vw;
+	padding-left: 1.1vw;
+	padding-top: 0.5vw;
+	padding-bottom: 0.5vw;
+	font-size: 110%;
+}
+
+table#visualizacao tr
+{
+	transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+table#visualizacao tr:hover
+{
+	background-color: rgba(0,0,0,0.1);
+}
+
+/*FOOTER*/
+
+footer
+{
+	width: 100%;
+	background-color: rgba(30,110,180,1);
+}
+footer div#footer
+{
+	padding: 2vw;
+	word-wrap: break-word;
+	font-size: 4vw;
+}
+
+div#footer
+{
+}
+
+div#footer table
+{
+	width: 100%;
+}
+
+div#footer table td
+{
+	text-align: center;
+	width: 33.333333333%;
+	max-width: 220px;
+	font-size: 42%;
+	color: white;
+	text-align: left;
+	padding-left: 5%;
+	padding-right: 5%;
+	overflow-wrap: break-word;
+	vertical-align: super;
+}
+
+div#footer table td a
+{
+	color: white;
+}
+
+button#paginas
+{
+	border: none;
+	font-size: 105%;
+	color: black;
+	vertical-align: middle;
+	width: 30px;
+	height: 30px;
+	transition: .3s;
+	background-color: rgba(0,0,0,0.1);
+}
+button#paginas:hover
+{
+	background-color: rgba(50,130,200,1);
+	color: white;	
+	cursor: pointer;
+}
+
+button#paginas.active
+{
+	background-color: rgba(30,110,180,1);
+	color: white;
+}
+button#paginas.active:hover
+{
+	cursor: default;
+}
+div#paginas
+{
+	display: inline-block;
+	max-width: 700px;
+	overflow: hidden;
+	border-radius: 15px;
+}
+table#admbrinquedos
+{
+	width: 70%;
+	margin-top: 15px;
+}
+table#admbrinquedos td
+{
+	text-align: left;
+	border-bottom: 1px solid rgba(30,110,180,1);
+	vertical-align: top;
+}
+table#admbrinquedos div#campo
+{
+	width: 70%;
+}
+div#tempo
+{
+	display: inline-block;
+	width: 40%;
+}
+div#tempo input
+{
+	margin: 0;
+	display: inline-block;float: left;
+	width: 50%;
+	border: none;
+	text-align: center;
+	transition: .3s;
+	padding-top: 5%;
+	padding-bottom: 5%;
+	background-color: rgba(0,0,0,0.1);
+	font-size: 102%;
+	cursor: pointer;
+}
+
+/*div#tempo input#tempo1
+{
+	border: 2px solid rgba(30,110,180,1);
+	border-right: none;
+}
+div#tempo input#tempo2
+{
+	border: 2px solid rgb(200,50,90);
+	border-left: none;
+}*/
+
+div#tempo input#tempo1:hover, input#tempo1.active
+{
+	background-color: rgba(30,110,180,1);
+	color: white;
+}
+
+div#tempo input#tempo2:hover, input#tempo2.active
+{
+	background-color: rgb(200,50,90);
+	color: white;
+}
+
+iframe#paginafotos
+{
+	border: none;
+	width: 93%;
+	height: 100vh;
+	background-color: transparent;
+	position: fixed;
+}
